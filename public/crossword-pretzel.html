@@ -46,33 +46,11 @@
       <ul>
         <li>A dictionary of all words, people and abbreviationsused in the Times crossword, both in solutions and clues</li>
         <li>A tool to help you understand clues with overlay highlighting for definitions, signpost words and other helpful hints</li>
+        <li>Some basic stats on e.g. rarity of terms</li>
+        <li>Analytics on clue types and patterns</li>
       </ul>
+      <p><a href="https://github.com/hblauth/crossword_pretzel">github repo</a></p>
       <a href="index.html">← Back to Portfolio</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
   </body>
 </html>
